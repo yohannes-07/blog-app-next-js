@@ -14,7 +14,7 @@ interface InputProps {
 
 const Input = ({type,value,onChange,name,textarea,id,placeholder,big}:InputProps) => {
     return (
-        <input id={id} placeholder={placeholder} type={type} value={value} onChange={onChange} name={name} className={`w-full p-4 pt-6 font-normal  bg-white border-2 outline-none transition disabled:opacity-0 disabled:cursor-not-allowed text-black ${textarea ? 'w-700px h-500px' : 'w-full'} ${big ? 'w-[400px] pb-[6rem]': ''}`}/>
+        <input id={id} placeholder={placeholder} type={type} value={value} onChange={onChange} name={name} style={{borderColor:'grey'}} className={`w-full p-4 pt-6 font-normal  border-black transition text-black ${textarea ? 'w-700px h-500px' : 'w-full'} ${big ? 'w-[400px] pb-[6rem]': ''}`}/>
       )
 }
 

@@ -17,9 +17,6 @@ interface BlogProps {
 export default function SingleBlog({key,data,currentUser}:BlogProps) {
 
     const router = useRouter();
-
-
-
     const onDelete = () => {
 
         axios.delete(`/api/blogs/${data.id}`)
@@ -41,8 +38,8 @@ export default function SingleBlog({key,data,currentUser}:BlogProps) {
                 <Image width={400} className="w-[500px] object-contain" rounded-full height={300} src={data.imageSrc} alt="Blog Image" />
 
                 <div className="w-[530px] flex flex-col gap-4 leading-[1.5]">
-                <h1>{data.name}</h1>
-                <p>{data.description}</p>
+                  <h1>{data.name}</h1>
+                  <p>{data.description}</p>
                 </div>
             </div>
         </div>

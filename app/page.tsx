@@ -1,12 +1,10 @@
 import SingleBlog from "@/components/SingleBlog";
 import getBlogs,{IBlogParams} from './actions/getBlog'
 import getCurrentUser from "./actions/getCurrentUser"
-import Link from "next/link";
 
 interface HomeProps {
   searchParams: IBlogParams
 };
-
 
 
 export default async function Home({searchParams}:HomeProps) {

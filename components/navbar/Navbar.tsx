@@ -15,13 +15,13 @@ export default function Navbar({currentUser}:UserMenuProps) {
 
   return (
     <header>
-         <nav className='bg-gray-400 flex justify-center gap-48  px-4 py-6 shadow-xl'>
+         <nav className='bg-sky-600 flex text-white font-bold text-lg justify-center gap-48  px-4 py-3 shadow-xl'>
             <div>{currentUser?.name}</div>
 
             <div className='flex gap-4'>
-            <Link href='/'>Home</Link>
-            <Link href='/create'>Create</Link>
-            {currentUser ? <button onClick={() => signOut()}>Sign out</button> : <Link href='/register'>Register</Link>}
+              <Link href='/'>Home</Link>
+              <Link href='/create'>Create</Link>
+              {currentUser ? <button onClick={() => signOut()}>Sign out</button> : <Link href='/register'>Register</Link>}
             </div>
         </nav>
     </header>

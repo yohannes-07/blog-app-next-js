@@ -60,20 +60,18 @@ export default function page() {
     
 
   return (
-    <form onSubmit={onSubmit} className='w-[600px] h-[700px] mx-auto py-12'>
-
-
+    <form onSubmit={onSubmit} className='gap-12 ms-48 flex justify-around min-w-fit px-48 py-12'>
         <div>
             <ImageUpload value={state.imageSrc} onChange={(value) => setCustomValue('imageSrc',value)}/>
         </div>
-
-        <div  className='flex flex-col justify-center h-[450px] w-[350px] mx-auto gap-2'>
-            <Input placeholder='Blog header' id='name' type='text' value={state.name} name='name' onChange={handleChange}/>
-            <Input big placeholder='Blog content or description' id='description' type='text' value={state.description} name='description' onChange={handleChange}/>
-        <div> 
-        </div>
-        <button type='submit' disabled={isLoading}>Submit</button>
-        </div>
+    
+            <div  className='flex flex-col justify-center  mx-auto gap-2'>
+                <Input placeholder='Blog header' id='name' type='text' value={state.name} name='name' onChange={handleChange}/>
+                <Input big placeholder='Blog content' id='description' type='text' value={state.description} name='description' onChange={handleChange}/>
+                <button type='submit' style={{backgroundColor: '#076aeb', color:'white', height: '50px', borderRadius:'10px'}} disabled={isLoading}>Submit</button>
+            </div> 
+           
+       
         
     </form>
   )
